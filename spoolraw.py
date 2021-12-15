@@ -28,7 +28,6 @@ def main():
     files = [x for x in sorted(glob.glob(os.path.dirname(os.path.realpath(__file__)) + '/spool/**/*-*', recursive=True))
         if not x.endswith('.info') and not x.endswith('.keep') and not x.endswith('.raw')]
     for fname in files:
-        #print(fname)
         rawname = fname + "." + ppdstd + ".raw"
         if not os.path.isfile(rawname):
             print ("Converto " + os.path.basename(rawname))
@@ -67,7 +66,7 @@ def main():
             cmd = CONV_CMD.split(' ')
             cmd = [x % {'in': fname, 'out': rawname, 'ppd': ppd, 'copies': copies, 'sides': sides, 'media': media} for x in cmd]
             cmd = " ".join(cmd)
-            #print (cmd)
+            print (cmd)
             os.system(cmd)
         else:
             print ("Salto " + os.path.basename(rawname))
