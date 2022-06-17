@@ -22,3 +22,10 @@ Run stampalafanza.py
 
 ![Console](/console.png)
 
+
+
+# Pantalla oled 
+- Install adafruit library 
+# https://github.com/adafruit/Adafruit_CircuitPython_Bundle
+# https://github.com/adafruit/Adafruit_CircuitPython_SSD1306
+- I would recomend to install it in a Python venv not in the native python
